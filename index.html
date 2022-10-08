@@ -8,48 +8,75 @@
     <link rel="icon" type="image/x-icon" href="./static/img/nami-favicon.png">
     <link rel="stylesheet" href="./css/build.css">
     <title>Nami</title>
-    <script defer>
-        let i = 0;
-        const slides = document.querySelectorAll(".slide");
-        const one = document.querySelector(".dot-1");
-        const two = document.querySelector(".dot-2");
-        const three = document.querySelector(".dot-2");
-        one.addEventListener("click", function () {
-            i=0
-            slides.forEach((card, indx) => {
-            slides.style.transform = `translateX(${100 * (-i)}%)`;
-         });
-       });
-       two.addEventListener("click", function () {
-            i=1
-
-            slides.forEach((card, indx) => {
-            slides.style.transform = `translateX(${100 * (-i)}%)`;
-        });
-        three.addEventListener("click", function () {
-            i=2
-            slides.forEach((card, indx) => {
-            slides.style.transform = `translateX(${100 * (-i)}%)`;
-        });
-    </script>
 </head>
+<script defer src="script.js">
+
+
+
+//     let i = 0;
+//     const slides = document.querySelectorAll(".slide");
+//     slides.forEach((slide, indx) => {
+//         slide.style.transform = `translateX(${indx * 100}%)`;
+//     });
+//     const one = document.querySelector(".dot-1");
+//     const two = document.querySelector(".dot-2");
+//     const three = document.querySelector(".dot-2");
+//     one.addEventListener("click", function () {
+//         i=0
+//         slides.forEach((card, indx) => {
+//         slides.style.transform = `translateX(${100 * (-i)}%)`;
+//      });
+//    });
+//    two.addEventListener("click", function () {
+//         i=1
+
+//         slides.forEach((card, indx) => {
+//         slides.style.transform = `translateX(${100 * (-i)}%)`;
+//     });
+//     three.addEventListener("click", function () {
+//         i=2
+//         slides.forEach((card, indx) => {
+//         slides.style.transform = `translateX(${100 * (-i)}%)`;
+//     });
+</script>
 <body class="bg-white">
     <nav class="flex justify-between w-10/12 mx-auto mt-8 items-center text-navy ml-auto">
         <a href="#"><img class="w-auto h-16" src="./static/img/Logo.png" alt="nami logo"></a>
-        <div class="ml-auto sm:hidden"><img src="images/icon-menu.svg" alt="hamburger menu"></div>
         <ul class="lg:flex gap-24 items-center font-bold hidden">
             <li><a href="#" class="flex items-center pb-2 border-b-4">Home</a></li>
             <li><a href="about.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">About Us</a></li>
             <li><a href="#" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Our Service</a></li>
             <li><a href="#" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Contact Us</a></li>
         </ul>
-        <div class="sm:block hidden">
+        <div class="flex">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button class="border-2 border-navy rounded-full ml-6 px-2 pb-1 font-arabic font-bold">عربي</button>
+            <button class="border-2 border-navy rounded-full ml-6 px-2 pb-1 font-arabic font-bold mr-2">عربي</button>
+            <button
+                id="menu-btn"
+                class="block hamburger md:hidden focus:outline-none mt-2"
+            >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
         </div>
+
     </nav>
+
+    <div class="md:hidden">
+        <div
+          id="menu"
+          class=" flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="#">Pricing</a>
+          <a href="#">Product</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Community</a>
+        </div>
+      </div>
     <section class="sm:w-11/12 ml-auto mt-14 flex">
-        <div class="text-center sm:text-left sm:flex flex-col justify-between items-start"> 
+        <div class="text-center sm:text-left sm:flex flex-col justify-between items-start hide"> 
             <div class=""></div>
             <div class="sm:flex flex-col items-start">
                 <h1 class="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Power your business with Nami.</h1>
@@ -65,22 +92,10 @@
         </div>
     </section>
     <section class="py-8 sm:py-28 bg-gradient-to-tr from-navy via-sky to-green text-white mt-14">
-        <div class="w-10/12 mx-auto relative transition-all duration-500 overflow-hidden">
-            <div class="slide w-full h-full">
+        <div class="w-10/12 mx-auto">
+            <div class="hide">
                 <h1 class="text-7xl font-bold">About Us</h1>
                 <p class="font-normal text-2xl mt-8">
-                    Int'ltec Group was established in the Kingdom of Saudi Arabia in 1995. the company
-is headquartered in Riyadh with offices all over the Kingdom of Saudi Arabia as well
-as in United Arab Emirates. Int'ltec Group is 100% Saudi-owned with a professional
-technical staff specialized in engineering design, project management, construction
-management, and electromechanical, and ICT services. The company's work force
-comprises of senior and medium level professionals as well as certified engineers
-and a proficient technical support team.
-                </p>
-            </div>
-            <div class="slide w-full absolute">
-                <h1 class="text-7xl font-bold">Two</h1>
-                <p class=" text-2xl mt-8">
                     Int'ltec Group was established in the Kingdom of Saudi Arabia in 1995. the company
 is headquartered in Riyadh with offices all over the Kingdom of Saudi Arabia as well
 as in United Arab Emirates. Int'ltec Group is 100% Saudi-owned with a professional
@@ -99,8 +114,8 @@ and a proficient technical support team.
     </section>
     <section class="py-28">
         <div class="w-10/12 mx-auto">
-            <h1 class="text-7xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Our Service</h1>
-            <p class="text-navy text-xl mt-4">
+            <h1 class="text-7xl hide font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Our Service</h1>
+            <p class="text-navy hide text-xl mt-4 mhidden">
                 The following copy is for placeholder example only. These statements are some of our favorite musings
                 regarding design. Design is simple. It’s about simplifying. Bad design makes it more complex. Remove
                 the non-essential in order to bing out the essential. The ability to simplify means to eliminate the
@@ -122,13 +137,13 @@ and a proficient technical support team.
             </div>
         </div>
     </section>
-    <div class="h-1 bg-gradient-to-r from-navy via-sky to-green text-white"></div>
-    <section class="py-28">
+
+    <section class="py-28 bg-gradient-to-tr from-navy via-sky to-green text-white mt-14 text-white">
         <div class="w-10/12 mx-auto">
             <div class="sm:flex">
                 <div class="sm:w-2/5">
-                    <h1 class="text-7xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Write to us</h1>
-                    <p class="text-navy">Do You Have A Question?</p>
+                    <h1 class="text-7xl font-bold">Write to us</h1>
+                    <p class="text-white">Do You Have A Question?</p>
                 </div>
                 <div class="sm:w-3/5">
                     <form action="">
