@@ -67,3 +67,35 @@
   .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translate(-6px);
   }
+  .quote:before {
+    font-family: Georgia, serif;
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 5em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+  }
+  .quote:after {
+    font-family: Georgia, serif;
+    content: "”";
+    position: absolute;
+    bottom: -110px;
+    line-height: 100px;
+    right: -32px;
+    font-size: 25em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+  }
+
+
+  /* tabs */
+
+
+  
+  .tab button.active {
+    background-color: #ffffff;
+    color: #310D7D;
+  }
+

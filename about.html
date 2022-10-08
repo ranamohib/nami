@@ -8,47 +8,76 @@
     <link rel="icon" type="image/x-icon" href="./static/img/nami-favicon.png">
     <link rel="stylesheet" href="./css/build.css">
     <title>Nami -About Us</title>
-
+    <script defer src="script.js"></script>
 </head>
 <body class="bg-white">
     <nav class="flex justify-between w-10/12 mx-auto mt-8 items-center text-navy ml-auto">
         <a href="#"><img class="w-auto h-16" src="./static/img/Logo.png" alt="nami logo"></a>
-        <div class="ml-auto sm:hidden"><img src="images/icon-menu.svg" alt="hamburger menu"></div>
         <ul class="lg:flex gap-24 items-center font-bold hidden">
-            <li><a href="index.html" class="flex items-center pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Home</a></li>
-            <li><a href="#" class="flex items-center pb-2 border-b-4">About Us</a></li>
-            <li><a href="#" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Our Service</a></li>
-            <li><a href="#" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Contact Us</a></li>
+            <li><a href="#" class="flex items-center pb-2 border-b-4">Home</a></li>
+            <li><a href="about.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">About Us</a></li>
+            <li><a href="service.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Our Services</a></li>
+            <li><a href="solutions.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Solutions</a></li>
+            <li><a href="partners.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Partners</a></li>
+            <li><a href="news.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">News</a></li>
         </ul>
-        <div class="sm:block hidden">
+        <div class="flex">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button class="border-2 border-navy rounded-full ml-6 px-2 pb-1 font-bold">عربي</button>
+            <button class="border-2 border-navy rounded-full ml-6 px-2 pb-1 font-arabic font-bold mr-2">عربي</button>
+            <button
+                id="menu-btn"
+                class="block hamburger md:hidden focus:outline-none mt-2"
+            >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
         </div>
+
     </nav>
+
+    <div class="md:hidden">
+        <div
+          id="menu"
+          class=" flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+          <a href="#">Pricing</a>
+          <a href="#">Product</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Community</a>
+        </div>
+      </div>
     <section class="py-28">
         <div class="w-8/12 mx-auto">
-            <h1 class="text-7xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Vision</h1>
-            <p class="text-navy text-4xl mt-4">
-                To lead the fintech market with our innovation, expertise, and partnership to endorse businesses with ongoing financial growth.
-            </p>
-            <h1 class="text-7xl font-bold mt-14 w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Mission</h1>
-            <p class="text-navy text-4xl mt-4">
-                To enable and endorse our clients through sustainable innovation, effective support, and objective guidance, achieving comprehensive financial growth and long-term partnerships.
-            </p>
-            <h1 class="text-7xl font-bold mt-14 w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Values</h1>
-            <ul role="list" class="text-navy text-4xl list-disc marker:to-navy mt-4 ml-12">
-                <li>Innovation</li>
-                <li>Growth</li>
-                <li>Sustainability</li>
-                <li>Commitment</li>
-                <li>Methodology</li>
-            </ul>
+            <div class="hide">
+                <h1 class="text-7xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Vision</h1>
+                <p class="text-navy text-4xl mt-4">
+                    To lead the fintech market with our innovation, expertise, and partnership to endorse businesses with ongoing financial growth.
+                </p>
+            </div>
+            <div class="hide">
+                <h1 class="text-7xl font-bold mt-14 w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Mission</h1>
+                <p class="text-navy text-4xl mt-4">
+                    To enable and endorse our clients through sustainable innovation, effective support, and objective guidance, achieving comprehensive financial growth and long-term partnerships.
+                </p>
+            </div>
+            <div class="hide">
+                <h1 class="text-7xl font-bold mt-14 w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Values</h1>
+                <ul role="list" class="text-navy text-4xl list-disc marker:to-navy mt-4 ml-12">
+                    <li>Innovation</li>
+                    <li>Growth</li>
+                    <li>Sustainability</li>
+                    <li>Commitment</li>
+                    <li>Methodology</li>
+                </ul>
+            </div>
 
         </div>
     </section>
     <section class="py-8 sm:py-28 bg-gradient-to-tr from-navy via-sky to-green text-white flex items-center mt-14">
         <div class="w-8/12 mx-auto">
-            <div class="">
+            <div class="hide">
                 <h1 class="text-7xl font-bold">Chairman message</h1>
                 <p class="font-medium text-4xl mt-6">
                     <span class="text-7xl">"</span> The following copy is for placeholder example only. These statements are some of our favorite musings
@@ -61,7 +90,7 @@
     </section>
     <section class="py-8 sm:py-28 ">
         <div class="w-8/12 mx-auto">
-            <div class="">
+            <div class="hide">
                 <h1 class="text-7xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">CEO message</h1>
                 <p class="font-medium text-4xl mt-6">
                     <span class="text-7xl">"</span> The following copy is for placeholder example only. These statements are some of our favorite musings

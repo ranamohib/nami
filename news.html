@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./static/img/nami-favicon.png">
+    <link rel="stylesheet" href="./css/build.css">
+    <title>Nami -About Us</title>
+    <script defer src="script1.js"></script>
+</head>
+<body class="bg-white">
+    <nav class="flex justify-between w-10/12 mx-auto mt-8 items-center text-navy ml-auto">
+        <a href="#"><img class="w-auto h-16" src="./static/img/Logo.png" alt="nami logo"></a>
+        <ul class="lg:flex gap-24 items-center font-bold hidden">
+            <li><a href="#" class="flex items-center pb-2 border-b-4">Home</a></li>
+            <li><a href="about.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">About Us</a></li>
+            <li><a href="service.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Our Services</a></li>
+            <li><a href="solutions.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Solutions</a></li>
+            <li><a href="partners.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">Partners</a></li>
+            <li><a href="news.html" class="flex items-center focus:pb-2 focus:border-b-4 transition-all ease-in-out delay-150">News</a></li>
+        </ul>
+        <div class="flex">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="border-2 border-navy rounded-full ml-6 px-2 pb-1 font-arabic font-bold mr-2">عربي</button>
+            <button
+                id="menu-btn"
+                class="block hamburger md:hidden focus:outline-none mt-2"
+            >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+
+    </nav>
+    <section class="w-8/12 mx-auto mt-12 text-navy">
+        <div class="tab overflow-hidden bg-gradient-to-r from-navy via-sky to-green text-white">
+            <button id="default1" class="tablinks px-6 py-8 hover:bg-white hover:text-navy font-bold text-2xl" onclick="openCity(event, 'London')">Latest News</button>
+            <button class="tablinks px-6 py-8 hover:bg-white hover:text-navy font-bold text-2xl"onclick="openCity(event, 'Paris')">Event Participation</button>
+
+          </div>
+          
+          <!-- Tab content -->
+          <div id="London" class="tabcontent hide py-12">
+            <h1 class="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Recent News</h1>
+            <div class="flex items-center gap-6 w-full overflow-hidden mt-12">
+                <button class="h-8 w-8 btn-prev rounded-full bg-navy text-white shrink-0"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="flex gap-6 w-full overflow-hidden">
+                    <div class="rounded-lg p-4 bg-navy w-56 shrink-0 card transition-all duration-500">
+                        <p class="text-white font-medium text-sm">14 August 2022</p>
+                        <p class="text-white font-bold text-base my-2">to enable and endorse our clients through sustainable innovation</p>
+                        <a href="#" class="text-white text-sm">Read More <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                    <div class="rounded-lg p-4 bg-navy w-56 shrink-0 card transition-all duration-500">
+                        <p class="text-white font-medium text-sm">14 August 2022</p>
+                        <p class="text-white font-bold text-base my-2">to enable and endorse our clients through sustainable innovation</p>
+                        <a href="#" class="text-white text-sm">Read More <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                    <div class="rounded-lg p-4 bg-navy w-56 shrink-0 card transition-all duration-500">
+                        <p class="text-white font-medium text-sm">14 August 2022</p>
+                        <p class="text-white font-bold text-base my-2">to enable and endorse our clients through sustainable innovation</p>
+                        <a href="#" class="text-white text-sm">Read More <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                    <div class="rounded-lg p-4 bg-navy w-56 shrink-0 card transition-all duration-500">
+                        <p class="text-white font-medium text-sm">14 August 2022</p>
+                        <p class="text-white font-bold text-base my-2">to enable and endorse our clients through sustainable innovation</p>
+                        <a href="#" class="text-white text-sm">Read More <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                    <div class="rounded-lg p-4 bg-navy w-56 shrink-0 card transition-all duration-500">
+                        <p class="text-white font-medium text-sm">14 August 2022</p>
+                        <p class="text-white font-bold text-base my-2">to enable and endorse our clients through sustainable innovation</p>
+                        <a href="#" class="text-white text-sm">Read More <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+                <button class="h-8 w-8 rounded-full bg-navy text-white shrink-0 btn-next"><i class="fa-solid fa-chevron-right"></i></button> 
+            </div>
+            
+          </div>
+          
+          <div id="Paris" class="tabcontent hide py-12">
+            <h1 class="text-7xl focus:bg-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-navy via-sky to-green">Event Participatio</h1>
+  
+
+          </div>
+
+    </section>
+
+
+    <footer class="py-4 bg-gradient-to-l from-navy via-sky to-green text-white mt-36 fixed bottom-0 left-0 w-screen">
+        <div class="w-11/12 ml-auto flex justify-between pr-12">
+            <p>Copyright © 2022 Nami inc. All rights reserved</p>
+            <div class="flex gap-2">
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
