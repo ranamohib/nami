@@ -45,6 +45,25 @@ function openCity(evt, cityName) {
   }
 
 
+  let i = 0;
+  const cards = document.querySelectorAll(".card");
+  const next = document.querySelector(".btn-next");
+  const prev = document.querySelector(".btn-prev");
+  next.addEventListener("click", function () {
+      i++;
+      if(i>4)i=0;
+      cards.forEach((card, indx) => {
+     card.style.transform = `translateX(${100 * (-i)}%)`;
+   });
+ });
+ prev.addEventListener("click", function () {
+      i--;
+      if(i<0)i=4;
+      cards.forEach((card, indx) => {
+      card.style.transform = `translateX(${100 * (-i)}%)`;
+  });
+
+});
 
 var acc = document.getElementsByClassName("acc");
 var j;

@@ -83,4 +83,6 @@ dot3.addEventListener("click", function () {
 });
 });
 
+
+
   document.querySelector("#default").click()
