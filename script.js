@@ -45,6 +45,42 @@ function openCity(evt, cityName) {
   }
 
 
-  
+  let i = 0;
+  const slides = document.querySelectorAll(".slide");
+  const dot1 = document.querySelector(".dot-1");
+  const dot2 = document.querySelector(".dot-2");
+  const dot3 = document.querySelector(".dot-3");
+
+  var intervalId = window.setInterval(function(){
+    if(i>2){
+        i=0
+    }
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (-i)}%)`;
+      });
+    i++
+  }, 4000);
+
+  dot1.addEventListener("click", function () {
+      i=0;
+
+      slides.forEach((slide, indx) => {
+     slide.style.transform = `translateX(${100 * (-i)}%)`;
+   });
+ });
+ dot2.addEventListener("click", function () {
+      i=1;
+      if(i<0)i=4;
+      slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (-i)}%)`;
+  });
+});
+dot3.addEventListener("click", function () {
+    i=2;
+    if(i<0)i=4;
+    slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (-i)}%)`;
+});
+});
 
   document.querySelector("#default").click()
