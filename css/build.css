@@ -979,6 +979,11 @@ video {
   line-height: 1.5rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1433,6 +1438,11 @@ iframe{
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }
 
